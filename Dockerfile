@@ -8,7 +8,7 @@ RUN apt-get install git curl nodejs libcurl4-gnutls-dev libicu-dev libmcrypt-dev
 
 # mongodb extension
 RUN apt-get install -yqq autoconf pkg-config libssl-dev
-RUN pecl install mongodb-1.2.2
+RUN pecl install mongodb-1.5.1
 RUN docker-php-ext-install bcmath
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
