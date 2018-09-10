@@ -1,4 +1,4 @@
-FROM php:7.1
+FROM php:5.6
 
 # lakukan update 
 RUN apt-get update -yqq
@@ -13,7 +13,7 @@ RUN docker-php-ext-install bcmath
 RUN echo "extension=mongodb.so" >> /usr/local/etc/php/conf.d/mongodb.ini
 
 # install modul php
-RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache 
+RUN docker-php-ext-install mbstring pdo_mysql curl json intl gd xml zip bz2 opcache
 
 # install composer
 RUN curl -sS https://getcomposer.org/installer | php 

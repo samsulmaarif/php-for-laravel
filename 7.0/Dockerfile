@@ -23,3 +23,6 @@ RUN mv composer.phar /usr/bin/composer
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install npm -yqq
 RUN npm install -g newman
+
+# cleanup
+RUN rm -rf /var/cache/apt/archives/* && rm -rf /tmp/*
